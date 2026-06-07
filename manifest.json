@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Bookmark Shortcuts",
+  "version": "1.0.0",
+  "description": "Open the first 9 bookmarks on your bookmarks bar with Ctrl+1–9 (Mac) or Alt+1–9 (Win/Linux).",
+  "permissions": ["bookmarks", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "commands": {
+    "open_bookmark_1": {
+      "description": "Open bookmark 1 from the bookmarks bar",
+      "suggested_key": { "default": "Alt+1", "mac": "MacCtrl+1" }
+    },
+    "open_bookmark_2": {
+      "description": "Open bookmark 2 from the bookmarks bar",
+      "suggested_key": { "default": "Alt+2", "mac": "MacCtrl+2" }
+    },
+    "open_bookmark_3": {
+      "description": "Open bookmark 3 from the bookmarks bar",
+      "suggested_key": { "default": "Alt+3", "mac": "MacCtrl+3" }
+    },
+    "open_bookmark_4": {
+      "description": "Open bookmark 4 from the bookmarks bar",
+      "suggested_key": { "default": "Alt+4", "mac": "MacCtrl+4" }
+    },
+    "open_bookmark_5": {
+      "description": "Open bookmark 5 from the bookmarks bar"
+    },
+    "open_bookmark_6": {
+      "description": "Open bookmark 6 from the bookmarks bar"
+    },
+    "open_bookmark_7": {
+      "description": "Open bookmark 7 from the bookmarks bar"
+    },
+    "open_bookmark_8": {
+      "description": "Open bookmark 8 from the bookmarks bar"
+    },
+    "open_bookmark_9": {
+      "description": "Open bookmark 9 from the bookmarks bar"
+    }
+  }
+}
