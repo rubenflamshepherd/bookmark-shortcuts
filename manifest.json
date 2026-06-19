@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Bookmark Shortcuts",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Open the first 9 bookmarks on your bookmarks bar with Ctrl+1–9 (Mac) or Alt+1–9 (Win/Linux).",
   "permissions": ["bookmarks", "tabs", "storage"],
   "background": {
