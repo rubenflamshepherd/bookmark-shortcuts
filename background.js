@@ -1,4 +1,5 @@
 const BOOKMARKS_BAR_ID = "1";
+const PREF_KEY = "openInNewTab";
 
 chrome.runtime.onInstalled.addListener((details) => {
   if (details.reason === "install") {
@@ -15,5 +16,10 @@ chrome.commands.onCommand.addListener(async (command) => {
   const node = children[slot - 1];
   if (!node || !node.url) return;
 
-  await chrome.tabs.create({ url: node.url, active: true });
+  const { [PREF_KEY]: openInNewTab = true } = await chrome.storage.sync.get(PREF_KEY);
+  if (openInNewTab) {
+    await chrome.tabs.create({ url: node.url, active: true });
+  } else {
+    await chrome.tabs.update({ url: node.url });
+  }
 });

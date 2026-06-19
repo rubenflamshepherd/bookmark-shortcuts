@@ -3,9 +3,13 @@
   "name": "Bookmark Shortcuts",
   "version": "1.0.0",
   "description": "Open the first 9 bookmarks on your bookmarks bar with Ctrl+1–9 (Mac) or Alt+1–9 (Win/Linux).",
-  "permissions": ["bookmarks", "tabs"],
+  "permissions": ["bookmarks", "tabs", "storage"],
   "background": {
     "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
   },
   "icons": {
     "16": "icons/icon16.png",
