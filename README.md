@@ -1,6 +1,6 @@
 # Bookmark Shortcuts
 
-A minimal Chrome extension (Manifest V3) that maps keyboard shortcuts to the first 9 items on your bookmarks bar. Pressing the shortcut for slot N opens that bookmark in a new foreground tab. Folder slots are intentionally ignored.
+A minimal Chrome extension (Manifest V3) that maps keyboard shortcuts to the first 9 items on your bookmarks bar. Pressing the shortcut for slot N opens that bookmark or shows the first 9 items when the slot is a folder.
 
 ## Default shortcuts
 
@@ -35,5 +35,9 @@ On first install, the extension opens a **welcome page** that explains this and 
 
 - Slot N refers to the Nth item on the bookmarks bar (1-indexed), counting folders.
 - If slot N is a URL bookmark → opens in a new foreground tab.
-- If slot N is a folder → nothing happens. (Chrome exposes no API to open the native bookmarks-bar folder dropdown.)
+- If slot N is a folder → opens a numbered menu at the top of the active webpage, approximately beneath that bookmark slot. Press `1` … `9` without a modifier to open an item.
+- If an item in the menu is another folder → selecting it shows that folder's first 9 items. Press `Backspace` or `←` to return to its parent.
+- On pages where Chrome blocks script injection, such as `chrome://` pages, the menu falls back to the extension toolbar popup.
 - If slot N is empty (fewer than N items on the bar) → nothing happens.
+
+Chrome does not expose the bookmarks bar's layout or native folder dropdown to extensions. The webpage menu estimates horizontal alignment by measuring the titles of preceding bookmark-bar items and applying Chrome's native button spacing and truncation limits. Browser-generated items such as the Apps shortcut and saved tab groups are not exposed, so alignment can still vary. Programmatic fallback popups require Chrome 127 or newer.

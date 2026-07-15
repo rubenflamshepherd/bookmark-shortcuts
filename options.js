@@ -1,5 +1,6 @@
 const PREF_KEY = "openInNewTab";
 const button = document.getElementById("open-in-new-tab");
+const shortcutSettingsButton = document.getElementById("open-shortcut-settings");
 const status = document.getElementById("status");
 let statusTimer = null;
 
@@ -23,4 +24,8 @@ button.addEventListener("click", async () => {
   setState(next);
   await chrome.storage.sync.set({ [PREF_KEY]: next });
   flashSaved();
+});
+
+shortcutSettingsButton.addEventListener("click", () => {
+  chrome.tabs.create({ url: "chrome://extensions/shortcuts" });
 });

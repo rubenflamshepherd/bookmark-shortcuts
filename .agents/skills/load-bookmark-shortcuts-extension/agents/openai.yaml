@@ -1,0 +1,4 @@
+interface:
+  display_name: "Load Bookmark Shortcuts"
+  short_description: "Load or refresh this repo in Google Chrome"
+  default_prompt: "Use $load-bookmark-shortcuts-extension to load or refresh this repository as an unpacked Chrome extension."

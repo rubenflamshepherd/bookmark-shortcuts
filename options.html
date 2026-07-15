@@ -56,6 +56,39 @@
         border: 1px solid var(--border);
         border-radius: 8px;
       }
+      .shortcut-settings {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-top: 12px;
+        padding: 14px 16px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+      }
+      .shortcut-settings .text { line-height: 1.45; }
+      .shortcut-settings .hint {
+        display: block;
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 2px;
+      }
+      .shortcut-settings button {
+        flex-shrink: 0;
+        padding: 8px 12px;
+        border: 0;
+        border-radius: 6px;
+        background: var(--accent);
+        color: #ffffff;
+        font: inherit;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .shortcut-settings button:hover { filter: brightness(1.08); }
+      .shortcut-settings button:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+      }
       .toggle .text { line-height: 1.45; }
       .toggle .hint { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
       .switch {
@@ -125,6 +158,20 @@
         >
           <span class="track" aria-hidden="true"></span>
           <span class="thumb" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="shortcut-settings">
+        <span class="text">
+          Keyboard shortcuts
+          <span class="hint">Assign or change shortcuts for bookmark slots 1–9.</span>
+        </span>
+        <button
+          id="open-shortcut-settings"
+          type="button"
+          aria-label="Configure keyboard shortcuts"
+        >
+          Configure
         </button>
       </div>
 
