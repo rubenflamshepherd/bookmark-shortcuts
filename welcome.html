@@ -106,7 +106,8 @@
       <p class="lede">
         Press <kbd>Ctrl</kbd>+<kbd>1</kbd>…<kbd>4</kbd> on macOS
         (or <kbd>Alt</kbd>+<kbd>1</kbd>…<kbd>4</kbd> on Windows/Linux)
-        to open the first four items on your bookmarks bar.
+        to open the first four items on your bookmarks bar. If an item is a folder,
+        press <kbd>1</kbd>…<kbd>9</kbd> in the numbered menu to choose from it.
       </p>
 
       <div class="warn" role="note">
@@ -132,6 +133,16 @@
           above is what gets you there. If it doesn't work, copy
           <code>chrome://extensions/shortcuts</code> into the address bar.
         </p>
+      </div>
+
+      <div class="warn" role="note">
+        <h2>One-time setup for shortcut preferences</h2>
+        <p>
+          By default, shortcuts open bookmarks in a new tab. If you'd rather
+          navigate the current tab, flip the toggle on the preferences page.
+        </p>
+
+        <button id="open-preferences" type="button">Open shortcut preferences</button>
       </div>
     </main>
     <script src="welcome.js"></script>
